@@ -1,0 +1,61 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+/* Custom Dark Button Style */
+.btn-dark {
+    background: linear-gradient(145deg, #2a2d32, #1a1c20);
+    border: 1px solid #444;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+.btn-dark:hover:not(:disabled) {
+    background: linear-gradient(145deg, #3a3d42, #2a2c30);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    transform: translateY(-2px);
+}
+.btn-dark:disabled {
+    background: #2c2c2c;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+    border-color: #333;
+}
+#code-editor {
+    min-height: 300px;
+    background-color: #2d2d2d;
+    border-radius: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.issue-card {
+    border-left-width: 4px;
+    transition: background-color 0.2s;
+}
+.issue-card:hover {
+    background-color: #374151;
+}
+.issue-critical { border-color: #ef4444; }
+.issue-warning { border-color: #f59e0b; }
+
+/* Styles for the new report history */
+.report-card summary {
+    cursor: pointer;
+    outline: none;
+}
+.report-card summary::-webkit-details-marker {
+    display: none;
+}
+.report-card summary .arrow {
+    transition: transform 0.2s;
+}
+.report-card[open] summary .arrow {
+    transform: rotate(90deg);
+}

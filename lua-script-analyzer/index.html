@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiveM Lua Script Analyzer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-4xl bg-gray-800 rounded-xl shadow-2xl p-8">
+        <div class="text-center mb-6">
+            <h1 class="text-3xl font-bold text-white">FiveM Lua Script Analyzer</h1>
+            <p class="text-gray-400 mt-2">Find common performance issues in your client-side scripts.</p>
+        </div>
+
+        <!-- Editor and Upload -->
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-3">1. Paste or Upload your Lua Script</h2>
+            <div class="bg-gray-700/50 p-1 rounded-lg">
+                 <textarea id="code-editor" class="w-full p-4 text-gray-200" placeholder="Paste your Lua code here..."></textarea>
+            </div>
+            <div class="text-center mt-3">
+                <label for="file-upload" class="cursor-pointer text-blue-400 hover:text-blue-300">
+                    ... or upload a .lua file
+                </label>
+                <input id="file-upload" type="file" class="hidden" accept=".lua">
+            </div>
+        </div>
+
+        <!-- Analyze Button -->
+        <div class="mb-6">
+            <button id="analyze-btn" class="w-full btn-dark">Analyze Script</button>
+        </div>
+        
+        <!-- Results Section -->
+        <div class="border-t border-gray-700 pt-6">
+            <h2 class="text-xl font-semibold mb-3">2. Reviewed Scripts</h2>
+            <div id="results-history-container" class="space-y-4">
+                <p id="results-placeholder" class="text-gray-500 text-center">Your analysis reports will appear here.</p>
+            </div>
+        </div>
+
+        <!-- Credit Line -->
+        <div class="text-center mt-8">
+            <p class="text-xs text-gray-500 font-medium">Made by Dark</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-lua.min.js"></script>
+    <!-- Link to your external JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>
